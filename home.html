@@ -9,30 +9,31 @@
      <script src="https://cdn.tailwindcss.com"></script>
      <!-- Tailwind link CDN  -->
      <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="shortcut icon" href="./payoo.png" type="image/x-icon">
 </head>
 <body>      
-        <main class="flex justify-center">
+        <main class="flex justify-center mt-20">
           <!-- phone Mockup   -->
             <div class="mockup-phone">
                 <div class="camera"></div>
                 <div class="display">
-                  <div class="artboard artboard-demo phone-3">
+                  <div class="artboard artboard-demo phone-2 p-4">
                     <!-- Availiable Balance -->
                     <div class="stats shadow">
                       <div class="stat">
-                        <div id="balance" class="stat-value">0</div>
+                        <div id="balance" class="stat-value text-center">1000</div>
                         <div class="stat-desc font-bold text-sm text-center">Available Balance</div>
                       </div>
                     </div>
                     <div class="divider"></div>
                     <!-- Action Button  -->
                   <div>
-                    <button class="btn btn-outline btn-primary">Add Money</button>
-                    <button class="btn btn-outline btn-error">Cash Out</button>
+                    <button id="add-money" class="btn btn-outline btn-primary">Add Money</button>
+                    <button id="cash-out" class="btn btn-outline btn-error">Cash Out</button>
                   </div>
                   <div class="divider"></div>
                   <!-- add money form start  -->
-                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                  <div id="add-money-form" class="selection:card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
@@ -52,6 +53,27 @@
                     </form>
                   </div>
                   <!-- add money form end  -->
+                   <!-- Cash out form start  -->
+                   <div id="cash-out-form" class=" hidden first-letter:card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Amount</span>
+                        </label>
+                        <input id="input-cash-out" type="text" placeholder="Cash out your amount" class="input input-bordered" required autocomplete="off" />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input id="input-cash-out-pin" type="password" placeholder="Enter 4 digit pin" class="input input-bordered" required autocomplete="off"  />
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+                      </div>
+                    </form>
+                  </div>
+                   <!-- cash out form end  -->
                   </div>
                 </div>
               </div>
@@ -61,5 +83,7 @@
 
 
        <script src="./JS/home.js"></script>
+       <script src="./JS/cashout.js"></script>
+       <script src="./JS/features.js"></script>
 </body>
 </html>
