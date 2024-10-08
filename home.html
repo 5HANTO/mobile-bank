@@ -30,10 +30,11 @@
                   <div>
                     <button id="add-money" class="btn btn-outline btn-primary">Add Money</button>
                     <button id="cash-out" class="btn btn-outline btn-error">Cash Out</button>
+                    <button id="transaction-history" class="btn btn-outline btn-success">Transaction</button>
                   </div>
                   <div class="divider"></div>
                   <!-- add money form start  -->
-                  <div id="add-money-form" class="selection:card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                  <div id="add-money-form" class="selection:card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-xl">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
@@ -54,7 +55,7 @@
                   </div>
                   <!-- add money form end  -->
                    <!-- Cash out form start  -->
-                   <div id="cash-out-form" class=" hidden first-letter:card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                   <div id="cash-out-form" class=" hidden first-letter:card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl rounded-xl">
                     <form class="card-body">
                       <div class="form-control">
                         <label class="label">
@@ -74,6 +75,11 @@
                     </form>
                   </div>
                    <!-- cash out form end  -->
+                    <!-- Transaction Section start  -->
+                    <div id="transaction-form" class="hidden">
+                        <h1 class="text-3xl text-center font-semibold">Transaction History</h1>
+                        <!-- Transaction section end  -->
+                    </div>
                   </div>
                 </div>
               </div>
@@ -81,9 +87,13 @@
 
 
 
+        <script src="./utilities.js"></script>
+        <script src="./JS/addMoney.js"></script>
+        <script src="./JS/withdraw.js"></script>
+        <script src="./JS/features.js"></script>
 
-       <script src="./JS/home.js"></script>
+       <!-- <script src="./JS/home.js"></script>
        <script src="./JS/cashout.js"></script>
-       <script src="./JS/features.js"></script>
+
 </body>
 </html>
