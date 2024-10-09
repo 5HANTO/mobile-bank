@@ -8,11 +8,25 @@ document.getElementById("cash-out-btn")
 
         if(withdrawPinNumber === 6264){
             const accountBalance = getInputTextValueById("balance");
+            console.log(accountBalance);
+            
+            if(withdrawMoney > accountBalance){
+                alert("You are not sufficient balance!!");
+                return;
+            }
             const newBalance = accountBalance - withdrawMoney;
-            console.log("Nai tk nai shor");
             
             
             document.getElementById("balance").innerText = newBalance;
+
+
+            // transaction History 
+            const p = document.createElement("p");
+            p.innerText = `Cash Out ${withdrawMoney} tk and New Balance is ${newBalance}`;
+
+            
+
+            document.getElementById("transaction-container").appendChild(p);
             
         }
         else{

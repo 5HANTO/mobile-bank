@@ -16,6 +16,16 @@ document.getElementById("add-money-btn")
           
             document.getElementById("balance").innerText = newBalance;
             
+
+            // Transaction History 
+
+            const p = document.createElement("p");
+            p.innerText = `Cash In ${addMoney} tk and New Balance is ${newBalance}`;
+
+            
+
+            document.getElementById("transaction-container").appendChild(p);
+      
             
 
         }
